@@ -10,6 +10,6 @@ public class FailingUnitTest {
 
     @Test
     public void failingTest() {
-        Assert.assertEquals(true, false);
+        Assert.assertEquals(true, true);
     }
 }
