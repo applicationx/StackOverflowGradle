@@ -1,10 +1,20 @@
-stage 'build_Project'
-node{
-  if(isUnix()){
-  sh 'gradlew build --info'
-
-  }
-  else{
-    bat 'gradlew build --info'
-  }
+pipeline {
+	agent any
+	stages {
+		stage('Build') {
+			steps {
+				echo 'Building...'
+			}
+		}
+		stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+	}
 }
